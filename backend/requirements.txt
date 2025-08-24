@@ -1,0 +1,13 @@
+# Core server
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+
+# CORS middleware (needed for frontend to call API)
+starlette==0.37.2
+
+# For reproducible shuffles / PRNG (if you use Python side RNG)
+numpy==2.0.1
+
+# Optional: validation, typing, testing
+pydantic==2.8.2
+pytest==8.3.2

@@ -48,12 +48,12 @@ Built with **React** (frontend) and **FastAPI** (backend) with offline fallback,
 
 ```bash
 # from repo root
-python -m venv .venv
-source .venv/bin/activate # Windows: .venv\Scripts\activate
-pip install -r backend/requirements.txt
+cd backend
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+uvicorn app:app --reload --port 8000
 
-# run FastAPI (hot reload)
-uvicorn backend.app:app --reload --host 0.0.0.0 --port 8000
 ```
 
 Endpoints:
@@ -66,8 +66,8 @@ Endpoints:
 ### Frontend (React)
 
 ```bash
-cd frontend
-npm i
+cd solitaire-react
+npm install
 npm run dev
 ```
 
@@ -94,28 +94,17 @@ When the API is not reachable, the UI shows **“Playing offline (local deal)”
 
 ```
 .
-├─ backend/
-│  ├─ app.py                 # FastAPI app (new game, score)
-│  ├─ requirements.txt
-│  └─ Dockerfile             # optional
-├─ frontend/
-│  ├─ index.html
-│  ├─ package.json
-│  ├─ vite.config.ts|js
-│  ├─ src/
-│  │  ├─ App.jsx             # UI, DnD, auto, undo, adaptive stacking
-│  │  └─ game/
-│  │     └─ klondike.js      # rules helpers (deal, canMove, RNG, SUITS, deepCloneState)
-│  ├─ styles.css
-│  └─ Dockerfile             # optional
-├─ docs/
-│  └─ screenshot.png
-├─ .github/
-│  ├─ workflows/             # CI (frontend/backend)
-│  └─ ISSUE_TEMPLATE/ etc.
-├─ .gitignore
-├─ .editorconfig
-├─ .gitattributes
-├─ LICENSE
-└─ README.md
+.
+├── backend/
+│   ├── app.py
+│   ├── requirements.txt
+│   └── solitaire_scores.db
+├── solitaire-react/
+│   ├── src/
+│   │   ├── game/
+│   │   └── App.jsx
+│   ├── package.json
+│   └── vite.config.js
+└── README.md
+
 ```
