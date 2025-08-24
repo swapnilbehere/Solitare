@@ -746,7 +746,7 @@ function onCardDoubleClick(origin, pileIndex, cardIndex) {
 
 
       <footer className="footer">
-        <small>Klondike Solitaire · React + Python · MIT License</small>
+        <small>Klondike Solitare · React + Python · MIT License</small>
       </footer>
     </div>
   );

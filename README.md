@@ -1,6 +1,6 @@
-# Klondike Solitaire (React + FastAPI)
+# Klondike Solitare (React + FastAPI)
 
-A fast, modern, hackable Solitaire you can run locally or deploy.
+A fast, modern, hackable Solitare you can run locally or deploy.
 Built with **React** (frontend) and **FastAPI** (backend) with offline fallback, **drag-and-drop**, undo, smart auto-moves, and adaptive pile stacking.
 
 <p align="center">
@@ -66,7 +66,7 @@ Endpoints:
 ### Frontend (React)
 
 ```bash
-cd solitaire-react
+cd Solitare-react
 npm install
 npm run dev
 ```
@@ -98,8 +98,8 @@ When the API is not reachable, the UI shows **“Playing offline (local deal)”
 ├── backend/
 │   ├── app.py
 │   ├── requirements.txt
-│   └── solitaire_scores.db
-├── solitaire-react/
+│   └── Solitare_scores.db
+├── Solitare-react/
 │   ├── src/
 │   │   ├── game/
 │   │   └── App.jsx

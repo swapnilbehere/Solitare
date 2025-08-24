@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from typing import List, Dict, Optional
 import random, sqlite3, os, time, uuid
 
-DB_PATH = os.environ.get("SOLITAIRE_DB", "solitaire_scores.db")
+DB_PATH = os.environ.get("SOLITARE_DB", "Solitare_scores.db")
 
 app = FastAPI()
 app.add_middleware(
